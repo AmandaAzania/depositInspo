@@ -6,6 +6,7 @@
   <p>joshua</p>
   <p>Hello</p>
   <p>Mogamat</p>
+  <p>Amanda</p>
   <router-view/>
 </template>
 
