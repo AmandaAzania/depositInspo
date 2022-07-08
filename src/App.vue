@@ -3,10 +3,6 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <p>joshua</p>
-  <p>Hello</p>
-  <p>Mogamat</p>
-  <p>Amanda</p>
   <router-view/>
 </template>
 
