@@ -5,6 +5,7 @@
   </nav>
   <p>joshua</p>
   <p>Hello</p>
+  <p>Mogamat</p>
   <router-view/>
 </template>
 
