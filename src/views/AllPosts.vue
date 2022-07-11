@@ -4,14 +4,16 @@
   <div v-if="posts" class="row">
     <div v-for="post in posts" :key="post" class="col-md-3">
       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<div class="cards">
-  <div class="card">
-    <img :src="post.image_url" alt="" class="postImg">
-    <p class="card-desc">
-      
-    </p>
-  </div>
-</div>
+      <div class="cards">
+        <div class="card">
+          <img :src="post.image_url" alt="" class="postImg">
+          <p class="card-desc">
+            Posted by 
+            <div>{{post.postedBy}}</div>
+            <button id="postButton">View</button>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   <div v-else>
@@ -99,9 +101,22 @@ body {
   top: 0;
   opacity: 0;
   padding: 18px 8%;
-  background-color: rgba(255, 255, 255, 0.422);
+  background-color: rgba(0, 0, 0, 0.65);
   overflow-y: scroll;
+  color: white;
   transition: 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#postButton{
+  width: 25%;
+  align-self: center;
+  border-radius: 200px;
+  background-color: #34495e;
+  font-size: 16px;
+  color: white;
 }
 
 .card:hover .card-desc {
