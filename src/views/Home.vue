@@ -1,7 +1,7 @@
 <template>
       <div class="container">
         <img src="../assets/logo1.png" alt="">
-        <p>CAM is a Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam blanditiis officia repudiandae. Aliquid laudantium quia impedit dolore a similique.</p>
+        <p id="about">Capture Any Moment (CAM) is a Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam blanditiis officia repudiandae. Aliquid laudantium quia impedit dolore a similique.</p>
         <router-link to="/posts">
             <button id="explore">Explore</button>
         </router-link>
@@ -20,7 +20,7 @@ export default {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: #056e6e;
+  background: #068282;
   padding-top: 100px;
   /* display: flex;
   flex-flow: column wrap;
@@ -35,7 +35,7 @@ img{
     object-position: center;
 }
 
-p{
+#about{
     margin-top: 15px;
     color: white;
     text-shadow: 1px 5px 5px black;
