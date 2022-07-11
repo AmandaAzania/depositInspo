@@ -1,7 +1,7 @@
 <template>
       <div class="container">
         <img src="../assets/logo1.png" alt="">
-        <p>Capture Any Moment (CAM) is a Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam blanditiis officia repudiandae. Aliquid laudantium quia impedit dolore a similique.</p>
+        <p id="about">Capture Any Moment (CAM) is a Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam blanditiis officia repudiandae. Aliquid laudantium quia impedit dolore a similique.</p>
         <router-link to="/posts">
             <button id="explore">Explore</button>
         </router-link>
@@ -35,7 +35,7 @@ img{
     object-position: center;
 }
 
-p{
+#about{
     margin-top: 15px;
     color: white;
     text-shadow: 1px 5px 5px black;
