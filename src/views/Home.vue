@@ -1,7 +1,12 @@
 <template>
       <div class="container">
         <img src="../assets/logo1.png" alt="">
-        <p id="about">Capture Any Moment (CAM) is a Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam blanditiis officia repudiandae. Aliquid laudantium quia impedit dolore a similique.</p>
+        <p id="about">Capture A Moment <strong>(CAM) </strong> is a user friendly free photo sharing  website where users are able to post comment and like images that they or other users have uploaded. 
+      The websites has different categories where users are able to find  a variety of pictures that peaks ones interest. 
+      There are brief descriptions but the main focus of the site is visual. 
+      clicking on a image will take you to the source as well as display similar interest to the image that has been clicked.
+      You can set up an account, log in and like other users posts or start your own.
+      posts can be tailored to a users profile according to their search history 😊.</p>
         <router-link to="/posts">
             <button id="explore">Explore</button>
         </router-link>
@@ -38,7 +43,11 @@ img{
 #about{
     margin-top: 15px;
     color: white;
-    text-shadow: 1px 5px 5px black;
+    text-shadow: 1px 2px 2px black;
+    width: 900px;
+    /* justify-self: center; */
+    
+    margin-left: 20%;
 }
 
 #explore{
