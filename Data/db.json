@@ -1,0 +1,82 @@
+{
+    "Data":[
+
+        {
+            "id": 1,
+            "image_url":"https://i.postimg.cc/bw7JvTgB/adidas-alphabounce.jpg",
+            "catergory":"shoes"
+        },
+
+        {
+            "id": 2,
+            "image_url":"https://i.postimg.cc/QN6sYb2W/Meme1.png",
+            "catergory":"memes"
+        },
+
+        {
+            "id": 3,
+            "image_url":"https://i.postimg.cc/PfLp4Pch/1972-Ford-Mustang.jpg",
+            "catergory":"cars"
+        },
+        {
+            "id": 4,
+            "image_url":"https://i.postimg.cc/9Fr2692g/Meme2.jpg",
+            "catergory":"memes"
+        },
+        {
+            "id": 5,
+            "image_url":"https://i.postimg.cc/90QXkNXr/Air-Max-1-Royal-Blue.jpg",
+            "catergory":"shoes"
+        },
+        {
+            "id": 6,
+            "image_url":"https://i.postimg.cc/WbgdBxTH/BMW-alpina.jpg",
+            "catergory":"cars"
+        },
+        {
+            "id": 7,
+            "image_url":"https://i.postimg.cc/d0KKZSyg/Meme3.webp",
+            "catergory":"memes"
+        },
+        {
+            "id": 8,
+            "image_url":"https://i.postimg.cc/Z5mW4jqK/golf-gt.jpg",
+            "catergory":"cars"
+        },
+        {
+            "id": 9,
+            "image_url":"https://i.postimg.cc/85DzRzqd/Crimson-Air-Jordan-4.webp",
+            "catergory":"shoes"
+        },
+        {
+            "id": 10,
+            "image_url":"https://i.postimg.cc/GpvpTySh/Nike-Adept-BB.jpg",
+            "catergory":"shoes"
+        },
+        {
+            "id": 11,
+            "image_url":"https://i.postimg.cc/cL3SHNrQ/Meme4.jpg",
+            "catergory":"memes"
+        },
+        {
+            "id": 12,
+            "image_url":"https://i.postimg.cc/DftWY7kG/Lexus.jpg",
+            "catergory":"cars"
+        },
+        {
+            "id": 13,
+            "image_url":"https://i.postimg.cc/y8Tkd9Jh/Nissan-gtr-black-35.jpg",
+            "catergory":"cars"
+        },
+        {
+            "id": 14,
+            "image_url":"https://i.postimg.cc/L6wS2s69/Meme5.webp",
+            "catergory":"memes"
+        },
+        {
+            "id": 15,
+            "image_url":"https://i.postimg.cc/L5Q4FBhv/Nike-Air-Max-90-DA8709-400-2.webp",
+            "catergory":"shoes"
+        }
+    ]
+}
