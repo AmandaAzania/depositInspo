@@ -1,8 +1,10 @@
 <template>
       <div class="container">
         <img src="../assets/logo.png" alt="">
-        <p>depositInspo is a Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam blanditiis officia repudiandae. Aliquid laudantium quia impedit dolore a similique.</p>
-        <button>Explore</button>
+        <p>CAM is a Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam blanditiis officia repudiandae. Aliquid laudantium quia impedit dolore a similique.</p>
+        <router-link to="/posts">
+            <button>Explore</button>
+        </router-link>
     </div>
 </template>
 
@@ -13,6 +15,10 @@ export default {
 </script>
 
 <style>
+body{
+    background: #056e6e;
+}
+
 .container{
   min-width: 100vw;
   margin: 0;
@@ -31,6 +37,8 @@ img{
 
 p{
     margin-top: 15px;
+    color: white;
+    text-shadow: 1px 5px 5px black;
 }
 
 button{
@@ -38,10 +46,12 @@ button{
     height: 35px;
     border-radius: 25px;
     border: white;
+    box-shadow: 0 0 10px black;
+    transition: all 1s;
 }
 
 button:hover{
-    box-shadow: 3px 3px 5px black;
+    box-shadow: 5px 5px 10px black;
     transition: all 1s;
 }
 
