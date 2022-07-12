@@ -1,11 +1,8 @@
 <template>
   <Navbar/>
   <div id="allPosts">
-  <div v-if="posts" class="row">
-    <div v-for="post in posts" :key="post" class="col-md-4">
-      <p>{{post.id}}</p>
-      <img :src="post.image_url" alt="" class="postImg">
-    </div>
+  <div v-if="posts" class="grid">
+    <Post v-for="post in posts" :key="post" :post='post'/>
   </div>
   <div v-else>
     Loading..
@@ -14,12 +11,14 @@
 </template>
 
 <script>
+import Post from '@/components/Post.vue';
 import Navbar from '../components/Navbar.vue'
 
 
 export default {
     components:{
-        Navbar
+        Navbar,
+        Post
     },
     mounted(){
         this.$store.dispatch('getPosts');
@@ -36,15 +35,18 @@ export default {
 #allPosts{
   margin-top: 8%;
   font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   min-width: 100vw;
+  padding: 25px;
 }
 
-.postImg{
-  border-radius: 0;
-  object-fit: fill;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
+body {
+
+  background-color: #34495e;
+}
 </style>
