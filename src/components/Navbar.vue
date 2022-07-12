@@ -75,6 +75,7 @@ header .btn:hover{
 #gear{
   font-size: 23px;
   color: black;
+  display: none;
 }
 
 #settings{

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Post from '@/components/Post.vue';
+import Post from '@/components/PostCard.vue';
 import Navbar from '../components/Navbar.vue'
 
 
