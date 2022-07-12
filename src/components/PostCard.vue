@@ -4,15 +4,21 @@
           <div class="card-desc">
             <p> Posted by <br>{{post.postedBy}}</p>
             <router-link :to="{name: 'post', params:{id: post.id}}">
-                <button id="postButton">View</button>
+                <button id="postButton" @click="getPost({post})">View</button>
             </router-link> 
           </div>
         </div>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
+// import store from '../store'
 export default {
-    props: ['post']
+    props: ['post'],
+
+    methods: {
+      ...mapActions(['getPost'])
+    }
 }
 </script>
 
