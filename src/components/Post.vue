@@ -1,11 +1,11 @@
 <template>
         <div class="card">
           <img :src="post.image_url" alt="" class="postImg">
-          <p class="card-desc">
+          <div class="card-desc">
             Posted by 
             <div>{{post.postedBy}}</div>
             <button id="postButton">View</button>
-          </p>
+          </div>
         </div>
 </template>
 

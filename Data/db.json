@@ -67,7 +67,7 @@
             "image_url":"https://i.postimg.cc/85DzRzqd/Crimson-Air-Jordan-4.webp",
             "catergory":"shoes",
             "desc":"The Air Jordan 4 “Bright Crimson/Pale Citron” is a 2019 release of the iconic silhouette in a exciting colourway",
-            "postedBy":"Michael Jordan"
+            "postedBy":"Michael Jordeen"
         },
         {
             "id": 10,
@@ -88,7 +88,7 @@
             "image_url":"https://i.postimg.cc/DftWY7kG/Lexus.jpg",
             "catergory":"cars",
             "desc":"German Mods",
-            "postedBy":"Harrion Toyota"
+            "postedBy":"Harrison volkswagen"
         },
         {
             "id": 13,
@@ -116,23 +116,27 @@
 
     "users":[
         {
-            "email":"AmandaTheCaptain@gmail.com",
-            "username":"theCaptain",
+            "id":1,
+            "email":"amandaTheCaptain@gmail.com",
+            "name":"amanda",
             "password":1234
         },
         {
-            "email":"muddathirIsBigSexy@gmail.com",
-            "username":"BigSexy",
+            "id":2,
+            "email":"muddathir@gmail.com",
+            "name":"muddathir",
             "password":5678
         },
         {
-            "email":"MogamatIsLoyal@gmail.com",
-            "username":"mogamat",
+            "id":3,
+            "email":"mogamat@gmail.com",
+            "name":"mogamat",
             "password":2345
         },
         {
-            "email":"JoshTheBroski@gmail.com",
-            "username":"broski",
+            "id":4,
+            "email":"joshua@gmail.com",
+            "name":"joshue",
             "password":6789
         }
         
