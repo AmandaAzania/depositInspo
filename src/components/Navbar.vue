@@ -54,6 +54,10 @@ a{
   margin-left: 10px;
 }
 
+nav{
+  background-color: #34495e;
+}
+
 header .btn i{
     color: black;
 }
