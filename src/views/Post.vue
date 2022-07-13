@@ -1,13 +1,19 @@
 <template>
 <Navbar/>
 <div id="singlePost" style="color='white'">
-    {{post}}
   <div v-if="post" id="bigcard">
-        <img :src="post.image_url" alt="" id="bigimg" class="img-fluid">
-        <hr>
+        <div id="cardImg">
+            <img :src="post.image_url" alt="" id="bigimg" class="img-fluid">
+        </div>
         <div id="bigDesc">
+          <div id="settings">
 
-        <p>{{post.catergory}}</p>
+          </div>
+          <div id="content">
+            <a :href="post.url" target="blank">{{post.url}}</a>
+            <h3>{{post.Title}}</h3>
+            <p>{{post.desc}}</p>
+          </div>
         </div>
   </div>
   <div v-else>
@@ -34,30 +40,32 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #bigcard{
-  margin-top: 10%;
-  font-size: 20px;
   align-self: center;
-  width: 60%;
-  height: 375px;
+  width: 75%;
+  height: 475px;
   background-color: white;
   border-radius: 30px;
   display: flex;
-   flex-flow: wrap row;
-   justify-content: space-between;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  border: 1px solid black;
 }
 
 #singlePost{
     display: flex;
 flex-direction: column;
 justify-content: center;
+  background-color: teal;
+  min-height: 100vh;
+
 }
 
 #bigimg{
     border-radius: 0;
-    width: 50%;
-    height: 375px;
+    width: 100%;
+    height: 100%;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     object-fit: fill;
@@ -65,7 +73,19 @@ justify-content: center;
 }
 
 #bigDesc{
-    padding-right: 15px;
+    width: 50%;
+    padding: 15px;
+    text-align: end;
+}
+
+#cardImg{
+  width: 50%;
+}
+
+#settings{
+  height: 50px;
+  background: black;
+  margin-bottom: 10px;
 }
 
 </style>
