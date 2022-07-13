@@ -3,9 +3,9 @@
           <nav class="navbar fixed-top">
             <div class="container">
               <div>
-              <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="Logo" width="56px" height="56px" id="icon"></router-link>
+              <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="Youtube Logo" width="56px" height="56px" id="icon"></router-link>
               <router-link to="/posts">Posts</router-link> | 
-              <router-link to="/">Add</router-link>
+              <router-link to="/AddPost">Add</router-link>
               </div>
               <div>
               <form class="d-flex">

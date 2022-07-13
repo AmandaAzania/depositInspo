@@ -32,8 +32,24 @@ export default createStore({
       .then((data) => {
         context.commit('setPosts', data)
       })
+      .then((data) => context.commit('setPosts' ,data))
+    },
+    addPost:(context,post)=>{
+    
+      fetch('http://localhost:3000/Data',{
+        method: "POST",
+        body: JSON.stringify(post),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+      .then(res =>  res.json())
+      .then(() => context.dispatch("getPosts"))
     }
   },
   modules: {
   }
 })
+
+
+
