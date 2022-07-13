@@ -15,6 +15,8 @@ export default {
 </script>
 
 <style>
+
+
 .container{
   min-width: 100vw;
   margin: 0;

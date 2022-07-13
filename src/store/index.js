@@ -16,8 +16,12 @@ export default createStore({
     }
   },
   actions: {
-    getPost(context, payload) {
-      context.commit('setPost', payload.post)
+    getPost(context, id) {
+      fetch('http://localhost:3000/Data/' + id)
+      .then((res) => res.json())
+      .then((data) => {
+        context.commit('setPost', data)
+      })    
     },
     getPosts(context){
       fetch('http://localhost:3000/Data')

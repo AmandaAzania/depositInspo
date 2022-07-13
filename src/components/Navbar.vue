@@ -3,7 +3,7 @@
           <nav class="navbar fixed-top">
             <div class="container-fluid">
               <div>
-              <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="Youtube Logo" width="56px" height="56px" id="icon"></router-link>
+              <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="Logo" width="56px" height="56px" id="icon"></router-link>
               <router-link to="/posts">Posts</router-link> | 
               <router-link to="/">Add</router-link>
               </div>
@@ -52,6 +52,13 @@ a{
   border-radius: 100px;
   width: 50px;
   margin-left: 10px;
+  transition: all 1s;
+}
+
+#btnSearch:hover{
+    background-color: #cacac9;
+    width: 50px;
+    border: 1px solid black;
 }
 
 nav{
@@ -60,10 +67,6 @@ nav{
 
 header .btn i{
     color: black;
-}
-
-header .btn:hover{
-    background-color: #cacac9;
 }
 
 #icon{

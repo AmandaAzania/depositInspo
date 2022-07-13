@@ -23,10 +23,13 @@ import store from '../store'
 export default {
   components: { Navbar },
     props: ['id'],
-    data() {
-        return {
-            post: store.state.post || this.id
-        }
+    mounted(){
+      store.dispatch('getPost', this.id)
+    },
+    computed:{
+      post(){
+        return store.state.post
+      }
     }
 }
 </script>
@@ -58,6 +61,7 @@ justify-content: center;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     object-fit: fill;
+    border-right: 1px solid black;
 }
 
 #bigDesc{
