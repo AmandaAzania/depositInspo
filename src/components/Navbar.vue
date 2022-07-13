@@ -26,11 +26,11 @@
 
             
                 </div>
-                 <div v-else>{{ user.username }} 
+                 <div v-else><span>{{ user.username }} </span>
 
                  <router-link to="/">
 
-                 <button @click="logout">
+                 <button class="btn-grad" @click="logout">
                   log out
                  </button>
 
@@ -143,4 +143,37 @@ header .btn i{
 #settings>i{
     padding: 0 10px 0 10px;
 }
+
+  span {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Koulen', cursive;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, rgb(1, 105, 39));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+.btn-grad {
+            background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+            margin-left: 2rem;
+
+            padding: 2px 5px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
 </style>

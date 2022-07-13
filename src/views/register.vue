@@ -45,6 +45,9 @@ export default {
   min-height: 100vh;
   background: #068282;
   padding-top: 100px;
+  background-image: url('./images/aa');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
   /* display: flex;
   flex-flow: column wrap;
