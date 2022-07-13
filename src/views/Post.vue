@@ -9,7 +9,7 @@
           <div id="settings">
 
           </div>
-          <div id="content">
+          <div id="main">
             <div id="link" v-if="post.urls !== null">
             <i class="bi bi-link-45deg"></i><a :href="post.urls.url" target="blank">{{post.urls.url_short}}</a>
             </div>
@@ -18,9 +18,10 @@
             </div>
             <h3>{{post.Title}}</h3>
             <p>{{post.desc}}</p>
-            <div id="posted">
-                <div></div>
-            </div>
+          </div>
+          <div id="posted">
+            <div></div>
+            <p>Posted by <span>{{post.postedBy}}</span></p>
           </div>
         </div>
   </div>
@@ -84,6 +85,9 @@ justify-content: center;
     width: 50%;
     padding: 15px;
     text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #cardImg{
@@ -112,7 +116,7 @@ a:hover{
   text-decoration: underline;
 }
 
-#content>h3{
+h3{
   font-weight: 600;
   font-size: 35px;
   color: black;
@@ -125,6 +129,7 @@ a:hover{
   border-radius: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
  #posted>div{
@@ -133,6 +138,33 @@ a:hover{
     width: 50px;
     border-radius: 100px;
     margin-left: 20px;
+    margin-right: 20px;
  }
+
+ #posted>p{
+  margin: 0;
+  font-size: 17px;
+  margin-right: 20px;
+ }
+
+ #posted>p>span{
+  font-weight: 800;
+ }
+
+@media (max-width: 875px){
+  #posted{
+    justify-content: center;
+  }
+  #posted>div{
+    display: none;
+    width: 100%;
+  }
+   #posted>p{
+  margin: 0;
+  font-size: 17px;
+  margin-left: 20px;
+  margin-right: 10px;
+ }
+}
 
 </style>

@@ -15,9 +15,24 @@
               </div>
               <div id="settings">
                 <i class="bi bi-gear" id="gear"></i>
-                <button class="btn account" ><i class="bi bi-person-circle"></i>Sign Up</button>
-                <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log In</button>
+                <div v-if="user">
+                  <button class="btn account" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">user.username</button>
+                </div>
+                <div v-else>
+                  <button class="btn account" ><i class="bi bi-person-circle"></i>Sign Up</button>
+                  <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log In</button>
+                </div>
               </div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Account Details</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+      Account Stuff
+  </div>
+</div>
             </div>
           </nav>
         </header>
@@ -30,9 +45,9 @@ export default {
 </script>
 
 <style scoped>
-.container{
+/* .container{
   justify-content: space-between;
-}
+} */
 
 a{
   text-decoration: none;
@@ -118,12 +133,12 @@ header .btn i{
     padding: 0 10px 0 10px;
 }
 
-@media (max-width:1000px){
+@media (max-width:1200px){
     img{
       display: none;
     }
-    .container{
-      display: flex !important;
-}
+    .navbar>.container{
+      flex-wrap: nowrap;
+    }
 }
 </style>
