@@ -32,7 +32,6 @@ export default createStore({
       .then((data) => {
         context.commit('setPosts', data)
       })
-      .then((data) => context.commit('setPosts' ,data))
     },
     addPost:(context,post)=>{
     
