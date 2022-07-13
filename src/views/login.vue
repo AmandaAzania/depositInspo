@@ -1,11 +1,12 @@
 <template>
+<Navbar/>
   <div class="container">
     <form @submit.prevent="login">
       <input type="text" v-model="email" placeholder="email" />
       <input type="text" v-model="password" placeholder="password" />
     <button type="submit">Login</button>
     </form>
-    <div v-if="user">Welcome <span>{{ user.username }}</span>
+    <div v-if="user">Welcome <span>{{ user.name }}</span>
         <router-link to="/posts">
                 <button class="btn-grad1" type="submit">See your pins</button>
                 </router-link>
@@ -13,7 +14,10 @@
   </div>
 </template>
 <script>
+import Navbar from '@/components/Navbar.vue';
+
 export default {
+  components: { Navbar },
   computed: {
     user() {
       return this.$store.state.user;
@@ -38,19 +42,18 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 
 .container{
   min-width: 100vw;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   background: #068282;
   padding-top: 100px;
 
-  background-image: url('./images/aa');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url('../assets/Gear-Polaroid-Now-Plus-1.png')no-repeat center center/cover;
+  object-fit: cover;
 
 }
 
@@ -77,14 +80,12 @@ export default {
           }
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Oleo+Script+Swash+Caps&display=swap');
 
-          span {
-  font-size: 16px;
+  span {
   font-weight: bold;
   font-family: 'Koulen', cursive;
   font-size: 30px;
   background: -webkit-linear-gradient(#eee, rgb(1, 77, 105));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
 
 }
          

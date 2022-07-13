@@ -14,54 +14,40 @@
               </form>
               </div>
               <div id="settings">
-                <i class="bi bi-gear" id="gear"></i>
-                <div v-if="user">
-                  <button class="btn account" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">user.username</button>
-                </div>
-                <div v-else>
-                  <button class="btn account" ><i class="bi bi-person-circle"></i>Sign Up</button>
-                  <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log In</button>
-                </div>
-              </div>
-
                 <div v-if="!user">
                   <router-link to="/register">
                   <button class="btn account" ><i class="bi bi-person-circle"></i>Sign in</button>
                 </router-link>
-
                 <router-link to="/login">
                 <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log in</button>
-                </router-link>
-
-            
+                </router-link>            
                 </div>
-                 <div v-else><span>{{ user.username }} </span>
+                 <div v-else>
+                  <button class="btn btn-grad" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                <i class="bi bi-gear" id="gear"></i>
+                    {{user.name}}</button>
 
-                 <router-link to="/">
-
-                 <button class="btn-grad" @click="logout">
-                  log out
-                 </button>
-
-                 </router-link>
-      
-                 </div>
-              </div>
-             
-            </div>
-          </nav>
-        </header>
-
-        
-<!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Account Details</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
-      Account Stuff
+      Welcome To Your Account Settings <br> {{user.name}}
+        <router-link to="/">
+          <button class="btn-grad" @click="logout">
+              Log Out
+          </button>
+        </router-link>
   </div>
-</div> -->
+</div>
+                 </div>
+              </div>
+
+              </div>
+             
+          </nav>
+        </header>
 </template>
 
 <script>
@@ -132,7 +118,6 @@ header .btn i{
 #gear{
   font-size: 23px;
   color: black;
-  display: none;
 }
 
 #settings{
@@ -182,8 +167,6 @@ header .btn i{
   font-family: 'Koulen', cursive;
   font-size: 30px;
   background: -webkit-linear-gradient(#eee, rgb(1, 105, 39));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
 }
 

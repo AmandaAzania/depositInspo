@@ -6,7 +6,7 @@
     <input type="text" v-model="password" placeholder="password" />
     <button type="submit">Register</button>
   </form>
-  <div v-if="user">Welcome {{ user.full_name }}</div>
+  <!-- <div v-if="user">Welcome {{ user.full_name }}</div> -->
 
   </div>
 </template>
@@ -45,7 +45,7 @@ export default {
   min-height: 100vh;
   background: #068282;
   padding-top: 100px;
-  background-image: url('./images/aa');
+  background-image: url('../assets/Gear-Polaroid-Now-Plus-1.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
