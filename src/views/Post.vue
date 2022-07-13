@@ -1,6 +1,5 @@
 <template>
 <Navbar/>
-{{post}}
 <div id="singlePost" style="color='white'">
   <div v-if="post" id="bigcard">
         <div id="cardImg">
@@ -11,9 +10,17 @@
 
           </div>
           <div id="content">
-            <a :href="post.urls.url" target="blank">{{post.urls.url_short}}</a>
+            <div id="link" v-if="post.urls !== null">
+            <i class="bi bi-link-45deg"></i><a :href="post.urls.url" target="blank">{{post.urls.url_short}}</a>
+            </div>
+            <div id="link" v-else-if="post.urls == null">
+              Link not found
+            </div>
             <h3>{{post.Title}}</h3>
             <p>{{post.desc}}</p>
+            <div id="posted">
+              
+            </div>
           </div>
         </div>
   </div>
@@ -89,12 +96,26 @@ justify-content: center;
   margin-bottom: 10px;
 }
 
+#link{
+    text-align: start;
+}
+
+#link>i{
+  font-size: 25px;
+}
+
 a{
   color: black;
 }
 
 a:hover{
-  color: #34495e;
+  text-decoration: underline;
+}
+
+#content>h3{
+  font-weight: 600;
+  font-size: 35px;
+  color: black;
 }
 
 </style>
