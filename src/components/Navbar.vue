@@ -24,7 +24,36 @@
                 </div>
               </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+                <div v-if="!user">
+                  <router-link to="/register">
+                  <button class="btn account" ><i class="bi bi-person-circle"></i>Sign in</button>
+                </router-link>
+
+                <router-link to="/login">
+                <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log in</button>
+                </router-link>
+
+            
+                </div>
+                 <div v-else><span>{{ user.username }} </span>
+
+                 <router-link to="/">
+
+                 <button class="btn-grad" @click="logout">
+                  log out
+                 </button>
+
+                 </router-link>
+      
+                 </div>
+              </div>
+             
+            </div>
+          </nav>
+        </header>
+
+        
+<!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Account Details</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -32,15 +61,21 @@
   <div class="offcanvas-body">
       Account Stuff
   </div>
-</div>
-            </div>
-          </nav>
-        </header>
+</div> -->
 </template>
 
 <script>
 export default {
-
+  computed:{
+    user(){
+      return this.$store.state.user
+    }
+  },
+   methods: {
+    logout(){
+       return this.$store.state.user = null
+    }
+  },
 }
 </script>
 
@@ -141,4 +176,36 @@ header .btn i{
       flex-wrap: nowrap;
     }
 }
+  span {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Koulen', cursive;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, rgb(1, 105, 39));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+.btn-grad {
+            background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+            margin-left: 2rem;
+
+            padding: 2px 5px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
 </style>
