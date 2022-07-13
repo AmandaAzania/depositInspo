@@ -15,9 +15,30 @@
               </div>
               <div id="settings">
                 <i class="bi bi-gear" id="gear"></i>
-                <button class="btn account" ><i class="bi bi-person-circle"></i>Sign In</button>
-                <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log In</button>
+                <div v-if="!user">
+                  <router-link to="/register">
+                  <button class="btn account" ><i class="bi bi-person-circle"></i>Sign in</button>
+                </router-link>
+
+                <router-link to="/login">
+                <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log in</button>
+                </router-link>
+
+            
+                </div>
+                 <div v-else>{{ user.username }} 
+
+                 <router-link to="/">
+
+                 <button @click="logout">
+                  log out
+                 </button>
+
+                 </router-link>
+      
+                 </div>
               </div>
+             
             </div>
           </nav>
         </header>
@@ -25,7 +46,16 @@
 
 <script>
 export default {
-
+  computed:{
+    user(){
+      return this.$store.state.user
+    }
+  },
+   methods: {
+    logout(){
+       return this.$store.state.user = null
+    }
+  },
 }
 </script>
 
