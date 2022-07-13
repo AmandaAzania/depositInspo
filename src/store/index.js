@@ -45,22 +45,24 @@ export default createStore({
       const userData = await response.json();
       context.commit("setUser", userData[0]);
     },
-    // register: (context, payload) => {
-    //   const { full_name, email, password } = payload;
-    //   fetch("http://localhost:3000/users", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       full_name: full_name,
-    //       email: email,
-    //       password: password,
-    //     }),
-    //     headers: {
-    //       "Content-type": "application/json; charset=UTF-8",
-    //     },
-    //   })
-    //     .then((response) => response.json())
-    //     .then((json) => context.commit("setUser", json));
-    // },
+
+    register: async (context, payload) => {
+      const { name, email, password } = payload;
+      await fetch("http://localhost:3000/users", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => context.commit("setUser", json));
+      // router.push({ name: "login" });
+    },
   },
   modules: {
   }

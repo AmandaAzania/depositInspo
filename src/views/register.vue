@@ -1,12 +1,12 @@
 <template>
 <div class="container">
   <form @submit.prevent="register">
-    <input type="text" v-model="full_name" placeholder="Full Name" />
+    <input type="text" v-model="name" placeholder="Full Name" />
     <input type="text" v-model="email" placeholder="email" />
     <input type="text" v-model="password" placeholder="password" />
     <button type="submit">Register</button>
   </form>
-  <div v-if="user">Welcome {{ user.full_name }}</div>
+  <div v-if="user">Welcome {{ user.name }}</div>
 
   </div>
 </template>
@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      full_name: "",
+      name: "",
       email: "",
       password: "",
     };
@@ -28,7 +28,7 @@ export default {
   methods: {
     register() {
       return this.$store.dispatch("register", {
-        full_name: this.full_name,
+        name: this.name,
         email: this.email,
         password: this.password,
       });
