@@ -31,7 +31,7 @@ export default createStore({
         },
       })
       .then(res =>  res.json())
-      .then(() => context.dispatch("getPosts"))
+      .then(()=> context.dispatch("getPosts"))
     }
   },
   modules: {

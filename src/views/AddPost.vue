@@ -7,7 +7,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLabel">Creat A Post</h4>
+                        <h4 class="modal-title" id="exampleModalLabel">Create A Post</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -40,8 +40,9 @@ export default {
     return{
             title: "",
             catergory: "",
-            desc: ""
-            
+            desc: "",
+            image_url:""
+
     }
   },
   methods:{
@@ -49,7 +50,9 @@ export default {
         return this.$store.dispatch("addPost",{
             title: this.title,
             catergory: this.catergory,
-            desc: this.desc
+            desc: this.desc,
+            image_url: this.image_url
+
         })
     }
   }
