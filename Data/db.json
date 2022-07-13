@@ -85,7 +85,10 @@
             "desc":"A breakthrough lacing system that electronically adjusts to the shape of your foot.",
             "postedBy":"Elon Perfume",
             "Title":"Nike Adapt BB",
-            "url":"https://news.nike.com/news/nike-adapt-bb"
+            "urls":{
+                        "url": "https://news.nike.com/news/nike-adapt-bb",
+                        "url_short": "news.nike.com/nike-adapt-bb"
+                   }
         },
         {
             "id": 11,

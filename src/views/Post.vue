@@ -1,5 +1,6 @@
 <template>
 <Navbar/>
+{{post}}
 <div id="singlePost" style="color='white'">
   <div v-if="post" id="bigcard">
         <div id="cardImg">
@@ -10,7 +11,7 @@
 
           </div>
           <div id="content">
-            <a :href="post.url" target="blank">{{post.url}}</a>
+            <a :href="post.urls.url" target="blank">{{post.urls.url_short}}</a>
             <h3>{{post.Title}}</h3>
             <p>{{post.desc}}</p>
           </div>
@@ -86,6 +87,14 @@ justify-content: center;
   height: 50px;
   background: black;
   margin-bottom: 10px;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: #34495e;
 }
 
 </style>
