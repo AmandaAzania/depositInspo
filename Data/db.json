@@ -6,7 +6,8 @@
             "image_url":"https://i.postimg.cc/bw7JvTgB/adidas-alphabounce.jpg",
             "catergory":"shoes",
             "desc":"Versatile running shoes with a seamless mesh upper and flexible cushioning.",
-            "postedBy":"Matty Cash"
+            "postedBy":"Matty Cash",
+            "Title":"Adidas Alphabounce"
 
         },
 
@@ -15,7 +16,8 @@
             "image_url":"https://i.postimg.cc/QN6sYb2W/Meme1.png",
             "catergory":"memes",
             "desc":"Javascript in a nutshell",
-            "postedBy":"Joel Mukanya"
+            "postedBy":"Joel Mukanya",
+            "Title":"Javascript For Dummies"
 
         },
 
@@ -24,14 +26,16 @@
             "image_url":"https://i.postimg.cc/PfLp4Pch/1972-Ford-Mustang.jpg",
             "catergory":"cars",
             "desc":"Mustang Power",
-            "postedBy":"Vin Petrol"
+            "postedBy":"Vin Petrol",
+            "Title":"Ford Mustang 1972"
         },
         {
             "id": 4,
             "image_url":"https://i.postimg.cc/9Fr2692g/Meme2.jpg",
             "catergory":"memes",
             "desc":"Javscript Explained !",
-            "postedBy":"Amanda"
+            "postedBy":"Amanda",
+            "Title":"Javascript = null"
             
         },
         {
@@ -39,100 +43,116 @@
             "image_url":"https://i.postimg.cc/90QXkNXr/Air-Max-1-Royal-Blue.jpg",
             "catergory":"shoes",
             "desc":"A Royal blue soft comfort sneaker",
-            "postedBy":"Joshue Finn"
+            "postedBy":"Joshue Finn",
+            "Title":"Air Max 1 (Royal Blue)"
         },
         {
             "id": 6,
             "image_url":"https://i.postimg.cc/WbgdBxTH/BMW-alpina.jpg",
             "catergory":"cars",
             "desc":"The new BMW ALPINA B7 accelerates from 0 to 100 km/h (0 to 62 mph) in just 3.6 seconds",
-            "postedBy":"Paul Runner"
+            "postedBy":"Paul Runner",
+            "Title":"BMW B7 Alpina"
         },
         {
             "id": 7,
             "image_url":"https://i.postimg.cc/d0KKZSyg/Meme3.webp",
             "catergory":"memes",
             "desc":"When your CSS is not CSS'ing",
-            "postedBy":"Muddathir"
+            "postedBy":"Muddathir",
+            "Title":"Gru Memes"
         },
         {
             "id": 8,
             "image_url":"https://i.postimg.cc/Z5mW4jqK/golf-gt.jpg",
             "catergory":"cars",
             "desc":"The Volkswagen Golf 7 GTI Performance 2.0 TSI 230HP top speed is 250 Km/h / 155 mph.",
-            "postedBy":"Morgan Jailman"
+            "postedBy":"Harrison volkswagen",
+            "Title":"Golf-GTI"
         },
         {
             "id": 9,
             "image_url":"https://i.postimg.cc/85DzRzqd/Crimson-Air-Jordan-4.webp",
             "catergory":"shoes",
             "desc":"The Air Jordan 4 “Bright Crimson/Pale Citron” is a 2019 release of the iconic silhouette in a exciting colourway",
-            "postedBy":"Michael Jordan"
+            "postedBy":"Michael Jordeen",
+            "Title":"Jordan 4 (Crimson Red)"
         },
         {
             "id": 10,
             "image_url":"https://i.postimg.cc/GpvpTySh/Nike-Adept-BB.jpg",
             "catergory":"shoes",
             "desc":"A breakthrough lacing system that electronically adjusts to the shape of your foot.",
-            "postedBy":"Elon Perfume"
+            "postedBy":"Elon Perfume",
+            "Title":"Nike Adapt BB"
         },
         {
             "id": 11,
             "image_url":"https://i.postimg.cc/cL3SHNrQ/Meme4.jpg",
             "catergory":"memes",
             "desc":"CSS fails",
-            "postedBy":"The Expert"
+            "postedBy":"The Expert",
+            "Title":"Help Me"
         },
         {
             "id": 12,
             "image_url":"https://i.postimg.cc/DftWY7kG/Lexus.jpg",
             "catergory":"cars",
             "desc":"German Mods",
-            "postedBy":"Harrion Toyota"
+            "postedBy":"Morgan Jailman",
+            "Title":"Lexus"
         },
         {
             "id": 13,
             "image_url":"https://i.postimg.cc/y8Tkd9Jh/Nissan-gtr-black-35.jpg",
             "catergory":"cars",
             "desc":"JDM Greatness",
-            "postedBy":"Nicki Manot"
+            "postedBy":"Nicki Manot",
+            "Title":"Nissan-GTR 35"
         },
         {
             "id": 14,
             "image_url":"https://i.postimg.cc/L6wS2s69/Meme5.webp",
             "catergory":"memes",
             "desc":"Funny Memes",
-            "postedBy":"Json"
+            "postedBy":"Json",
+            "Title":"My Life Story"
+
         },
         {
             "id": 15,
             "image_url":"https://i.postimg.cc/L5Q4FBhv/Nike-Air-Max-90-DA8709-400-2.webp",
             "catergory":"shoes",
             "desc":"The Nike Air Max 90 is a even better feel for you. Cushioning is softer and more flexible",
-            "postedBy":"Cardi E"
+            "postedBy":"Cardi E",
+            "Title":"Nike Air Max 90"
 
         }
     ],
 
     "users":[
         {
-            "email":"AmandaTheCaptain@gmail.com",
-            "username":"theCaptain",
+            "id":1,
+            "email":"amanda@gmail.com",
+            "name":"amanda",
             "password":1234
         },
         {
-            "email":"muddathirIsBigSexy@gmail.com",
-            "username":"BigSexy",
+            "id":2,
+            "email":"muddathir@gmail.com",
+            "name":"muddathir",
             "password":5678
         },
         {
-            "email":"MogamatIsLoyal@gmail.com",
-            "username":"mogamat",
+            "id":3,
+            "email":"mogamat@gmail.com",
+            "name":"mogamat",
             "password":2345
         },
         {
-            "email":"JoshTheBroski@gmail.com",
-            "username":"broski",
+            "id":4,
+            "email":"joshua@gmail.com",
+            "name":"joshua",
             "password":6789
         }
         

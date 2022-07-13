@@ -2,10 +2,9 @@
         <div class="card">
           <img :src="post.image_url" alt="" class="postImg">
           <div class="card-desc">
-            <p> Posted by <br>{{post.postedBy}}</p>
-            <router-link :to="{name: 'post', params:{id: post.id}}">
-                <button id="postButton">View</button>
-            </router-link> 
+            Posted by 
+            <div>{{post.postedBy}}</div>
+            <button id="postButton">View</button>
           </div>
         </div>
 </template>
