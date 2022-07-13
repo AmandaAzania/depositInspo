@@ -39,6 +39,11 @@ export default {
   padding: 25px;
 }
 
+@media (max-width:1200px){
+    #allPosts{
+      margin-top: 12%
+    }
+}
 * {
   margin: 0;
   padding: 0;

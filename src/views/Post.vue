@@ -19,7 +19,7 @@
             <h3>{{post.Title}}</h3>
             <p>{{post.desc}}</p>
             <div id="posted">
-              
+                <div></div>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default {
 #bigcard{
   align-self: center;
   width: 75%;
-  height: 475px;
+  height: auto;
   background-color: white;
   border-radius: 30px;
   display: flex;
@@ -65,14 +65,14 @@ export default {
     display: flex;
 flex-direction: column;
 justify-content: center;
-  background-color: teal;
+  background-color: #008080;
   min-height: 100vh;
 
 }
 
 #bigimg{
     border-radius: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -117,5 +117,22 @@ a:hover{
   font-size: 35px;
   color: black;
 }
+
+#posted{
+  width: 100%;
+  background-color: rgb(225, 225, 225);
+  height: 60px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+ #posted>div{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    margin-left: 20px;
+ }
 
 </style>

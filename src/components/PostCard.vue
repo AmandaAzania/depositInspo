@@ -47,9 +47,7 @@ export default {
   grid-row: span 2;
 }
 
-.card:nth-child(13) {
-  grid-row: span 2;
-}
+
 
 .postImg{
   border-radius: 0;

@@ -1,7 +1,7 @@
 <template>
         <header>
           <nav class="navbar fixed-top">
-            <div class="container-fluid">
+            <div class="container">
               <div>
               <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="Logo" width="56px" height="56px" id="icon"></router-link>
               <router-link to="/posts">Posts</router-link> | 
@@ -15,7 +15,7 @@
               </div>
               <div id="settings">
                 <i class="bi bi-gear" id="gear"></i>
-                <button class="btn account" ><i class="bi bi-person-circle"></i>Sign In</button>
+                <button class="btn account" ><i class="bi bi-person-circle"></i>Sign Up</button>
                 <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log In</button>
               </div>
             </div>
@@ -29,7 +29,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.container{
+  justify-content: space-between;
+}
 
 a{
   text-decoration: none;
@@ -73,6 +76,7 @@ header .btn i{
   width: 156px;
   height: 56px;
   border-radius: 0;
+  object-fit: cover;
 }
 
 #gear{
@@ -88,7 +92,7 @@ header .btn i{
 }
 
 #settings button{
-    width: 100px;
+    width: 110px;
     font-size: 15px;
     background-color: white;
     border: solid 1.5px #056e6e;
@@ -112,5 +116,14 @@ header .btn i{
 
 #settings>i{
     padding: 0 10px 0 10px;
+}
+
+@media (max-width:1000px){
+    img{
+      display: none;
+    }
+    .container{
+      display: flex !important;
+}
 }
 </style>

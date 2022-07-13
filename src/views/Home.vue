@@ -19,9 +19,7 @@ export default {
 }
 </script>
 
-<style>
-
-
+<style scoped>
 .container{
   min-width: 100vw;
   margin: 0;
@@ -46,7 +44,7 @@ img{
     margin-top: 15px;
     color: white;
     text-shadow: 1px 2px 2px black;
-    width: 900px;
+    width: 60%;
     /* justify-self: center; */
     
     margin-left: 20%;
@@ -73,7 +71,12 @@ img{
       margin-bottom: 15px;
     }
     .container{
-        padding-top: 175px;
+        padding-top: 100px;
+        padding-bottom: 15px;
+    }
+    #about{
+        width: 90%;
+        margin-left: 10px;
     }
 }
 
