@@ -12,14 +12,18 @@
                     </div>
                     <div class="modal-body">
                     <h6>Add a Image</h6>
-                    <input id="image_url" >
+                    <input id="image_url"  type="text" v-model="image_url">
                     
                     <h6>Catergory</h6>
                     <input id="Catergory" type="text" v-model="catergory">
                     <h6> Enter Title</h6>
-                    <input id="Title" type="text" v-model="title">
+                    <input id="Title" type="text" v-model="Title">
                     <h6> Add Description</h6>
                     <input id="Desc " type="text" v-model="desc">
+                    <h6> Add Url To Website</h6>
+                    <input id="Desc " type="text" v-model="url">
+                    <h6> Add a Shortened url</h6>
+                    <input id="Desc " type="text" v-model="url_short">
                     
                     
                     </div>
@@ -38,22 +42,29 @@ export default {
   components: { Navbar },
   data(){
     return{
-            title: "",
+            Title: "",
             catergory: "",
             desc: "",
-            image_url:""
+            image_url:"",
+            url:"",
+            url_short:""
 
     }
   },
   methods:{
     addPost(){
         return this.$store.dispatch("addPost",{
-            title: this.title,
+            Title: this.Title,
             catergory: this.catergory,
             desc: this.desc,
-            image_url: this.image_url
+            image_url: this.image_url,
+            urls:{
+                url:this.url,
+                url_short: this.url_short ,
+            }
 
         })
+        
     }
   }
 }

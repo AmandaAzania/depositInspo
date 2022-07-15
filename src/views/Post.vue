@@ -7,6 +7,14 @@
         </div>
         <div id="bigDesc">
           <div id="settings">
+            <router-link to="/posts">
+              <button type="button" id="Dbutton" @click="deletPost(this.id)"><i class="bi bi-trash"></i></button>
+              </router-link>
+              <!-- <router-link to="/posts">
+              <button type="button" id="Dbutton" @click="editPost(this.id)">Edit Post</button>
+              </router-link> -->
+          <button type="button" id="Dbutton" data-bs-toggle="modal" data-bs-target="#update" ><i class="bi bi-pencil-square"></i></button>
+
 
           </div>
           <div id="main">
@@ -24,6 +32,7 @@
             <p>Posted by <span>{{post.postedBy}}</span></p>
           </div>
         </div>
+        <Update :data="post"/>
   </div>
   <div v-else>
     Loading...
@@ -35,8 +44,9 @@
 <script>
 import Navbar from '@/components/Navbar.vue'
 import store from '../store'
+import Update from '@/components/update.vue'
 export default {
-  components: { Navbar },
+  components: { Navbar, Update },
     props: ['id'],
     mounted(){
       store.dispatch('getPost', this.id)
@@ -45,6 +55,12 @@ export default {
       post(){
         return store.state.post
       }
+    },
+    methods:{
+      deletPost(){
+        return this.$store.dispatch("deletPost", this.id)
+      }
+
     }
 }
 </script>
@@ -60,6 +76,22 @@ export default {
   flex-flow: wrap row;
   justify-content: space-between;
   border: 1px solid black;
+}
+
+#Dbutton{
+  font-size: 20px;
+  width: 110px;
+  background-color: white;
+  border: solid 1.5px #056E6E;
+  color: #056E6E;
+  transition: all 1s;
+  height: 50px;
+}
+
+#Dbutton:hover{
+  background-color: #0A9393;
+  color: white;
+  transition: all 1s;
 }
 
 #singlePost{
