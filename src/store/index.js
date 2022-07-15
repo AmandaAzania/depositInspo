@@ -61,6 +61,7 @@ export default createStore({
       const userData = await response.json();
       context.commit("setUser", userData[0]);
     },
+<<<<<<< HEAD
     search:(context, payload) =>{
       fetch('http://localhost:3000/Data?catergory=' + payload)
     },
@@ -80,6 +81,25 @@ export default createStore({
       })
       .then((response) => response.json())
         .then(() => context.dispatch("getPost"));
+=======
+
+    register: async (context, payload) => {
+      const { name, email, password } = payload;
+      await fetch("http://localhost:3000/users", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => context.commit("setUser", json));
+      // router.push({ name: "login" });
+>>>>>>> b4e58e7f05f26f482c6872598b64db9cf40a2fa8
     },
   },
   modules: {

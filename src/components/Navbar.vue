@@ -63,12 +63,12 @@ export default {
       return this.$store.state.user
     }
   },
-   methods: {
-    logout(){
-       return this.$store.state.user = null
-    }
+  methods: {
+    logout() {
+      return (this.$store.state.user = null);
+    },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -81,56 +81,56 @@ a{
   color: white;
 }
 
-#search{
+#search {
   border-radius: 20px;
   width: 400px;
 }
 
-.btn{
-      border-radius: 0%;
-      width: 50px;
-      border: #d4d9de 1px solid;
-      background-color: #f8f8f8;
+.btn {
+  border-radius: 0%;
+  width: 50px;
+  border: #d4d9de 1px solid;
+  background-color: #f8f8f8;
 }
 
-#btnSearch{
+#btnSearch {
   border-radius: 100px;
   width: 50px;
   margin-left: 10px;
   transition: all 1s;
 }
 
-#btnSearch:hover{
-    background-color: #cacac9;
-    width: 50px;
-    border: 1px solid black;
+#btnSearch:hover {
+  background-color: #cacac9;
+  width: 50px;
+  border: 1px solid black;
 }
 
-nav{
+nav {
   background-color: #34495e;
   color: black;
 }
 
-header .btn i{
-    color: black;
+header .btn i {
+  color: black;
 }
 
-#icon{
+#icon {
   width: 156px;
   height: 56px;
   border-radius: 0;
   object-fit: cover;
 }
 
-#gear{
+#gear {
   font-size: 23px;
   color: black;
 }
 
-#settings{
-    padding: 5px 10px 5px 10px;
-    display: flex;
-    align-items: center;
+#settings {
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  align-items: center;
 }
 
 #settings button{
@@ -142,22 +142,22 @@ header .btn i{
     transition: all 1s;
 }
 
-#settings button>i{
-    color: #045050;
+#settings button > i {
+  color: #045050;
 }
 
-#settings button:hover{
+#settings button:hover {
   background-color: #0a9393;
   color: white;
   transition: all 1s;
 }
 
-#settings i{
-    padding: 0 5px 0 5px;
+#settings i {
+  padding: 0 5px 0 5px;
 }
 
-#settings>i{
-    padding: 0 10px 0 10px;
+#settings > i {
+  padding: 0 10px 0 10px;
 }
 
 @media (max-width:1200px){
