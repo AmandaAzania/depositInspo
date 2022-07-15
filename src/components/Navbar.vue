@@ -5,7 +5,7 @@
               <div>
               <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="CAM Logo" width="56px" height="56px" id="icon"></router-link>
               <router-link to="/posts">Posts</router-link> | 
-              <router-link to="/AddPost" v-if="user" data-bs-toggle="modal" data-bs-target="#exampleModal1">Add</router-link>
+              <router-link to="/AddPost" v-if="user" data-bs-toggle="modal" data-bs-target="#AddModal">Add</router-link>
               </div>
               <div>
               </div>
@@ -19,9 +19,10 @@
                 </router-link>            
                 </div>
                  <div v-else>
-                  <button class="btn btn-grad" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" id="account">
-                <i class="bi bi-gear" id="gear"></i>
-                  <span id="username">{{user.name}}</span></button>
+                  <button class="btn btn-grad gears" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" id="account">
+                    <i class="bi bi-gear" id="gear"></i>
+                    <span id="username">{{user.name}}</span>
+                  </button>
 
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
                       <div class="offcanvas-header">
@@ -224,7 +225,7 @@ header .btn i{
     #username{
       display: none;
     }
-    .btn-grad{
+    .gears{
       width: 47px !important;
     }
 }

@@ -7,7 +7,9 @@
         </div>
         <div id="bigDesc">
           <div id="settings">
+              <div v-if="user">
 
+              </div>
           </div>
           <div id="main">
             <div id="link" v-if="post.urls !== null">
@@ -99,7 +101,7 @@ justify-content: center;
 
 #settings{
   height: 50px;
-  background: black;
+  background: rgb(225, 225, 225);
   margin-bottom: 10px;
 }
 
