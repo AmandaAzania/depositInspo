@@ -48,8 +48,9 @@ export default createStore({
         },
       })
       .then(res =>  res.json())
-      .then(() => context.dispatch("getPosts"))
+      .then(()=> context.dispatch("getPosts"))
     },
+
 
     login: async (context, payload) => {
       const { email, password } = payload;
@@ -62,7 +63,24 @@ export default createStore({
     },
     search:(context, payload) =>{
       fetch('http://localhost:3000/Data?catergory=' + payload)
-    }
+    },
+    deletPost:(context , id) => {
+      fetch ("http://localhost:3000/Data/" + id, {
+        method:"Delete",
+      }).then(() => context.dispatch("getPosts"));
+    },
+    editPost:(context , Data) => {
+      fetch("http://localhost:3000/Data/" + Data.id, {
+        method: "PUT",
+        body:JSON.stringify(Data),
+        headers : {
+          "content-type": "application/json; charset=UTF-8",
+        },
+
+      })
+      .then((response) => response.json())
+        .then(() => context.dispatch("getPost"));
+    },
   },
   modules: {
   }

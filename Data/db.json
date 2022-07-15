@@ -85,7 +85,7 @@
       "id": 8,
       "image_url": "https://i.postimg.cc/Z5mW4jqK/golf-gt.jpg",
       "catergory": "cars",
-      "desc": "The Volkswagen Golf 8 GTI Performance 2.0 TSI 230HP top speed is 250 Km/h / 155 mph.",
+      "desc": "The award-winning Golf GTI comes powered with a 7-speed DSG® petrol engine pushing out 216kW",
       "postedBy": "Harrison volkswagen",
       "Title": "Golf-GTI",
       "urls": {
@@ -113,8 +113,8 @@
       "postedBy": "Elon Perfume",
       "Title": "Nike Adapt BB",
       "urls": {
-        "url": "https://news.nike.com/news/nike-adapt-bb",
-        "url_short": "news.nike.com/news/nike-adapt-bb"
+        "url": "https://www.nike.com/za/adapt",
+        "url_short": "https://www.nike.com/za/adapt"
       }
     },
     {
@@ -155,7 +155,7 @@
       "image_url": "https://i.postimg.cc/L6wS2s69/Meme5.webp",
       "catergory": "memes",
       "desc": "Funny Memes",
-      "postedBy": "Json",
+      "postedBy": "Mogamat",
       "Title": "My Life Story",
       "urls": {
         "url": "https://betterprogramming.pub/15-css-tips-guides-and-code-snippets-for-beginners-efde96fb0aee",
