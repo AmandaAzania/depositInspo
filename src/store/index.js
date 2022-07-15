@@ -1,58 +1,54 @@
 import { createStore } from 'vuex'
-// import Vue from 'vue';
-// import Vuex from 'vuex';
-import db from 'db.json';
-
-// Vue.useAttrs(Vuex);
-
 export default createStore({
   state: {
-    users: [],
-    currentUser: {name: 'Text User'}
+    posts: null,
+    post: null,
+    user: null
   },
-  
+  getters: {
+  },
 
   mutations: {
-    SET_USERS(state, users) {
-      state.users = users;
+    setPosts(state, posts){
+        state.posts = posts
     },
-    LOGOUT_USER(state) {
-      state.currentUser = {}
-      window.localStorage.currentUser = JSON.stringify({});
+
+    setPost(state, post){
+        state.post = post
     },
-    SET_CURRENT_USER(state, user) {
-      state.currentUser = user;
-      window.localStorage.currentUser = JSON.stringify(user);
-    },
+
+    setUser(state, user){
+      state.user = user
+    }
   },
 
   actions: {
+    getPost(context, id) {
+      fetch('http://localhost:3000/Data/' + id)
+      .then((res) => res.json())
+      .then((data) => {
+        context.commit('setPost', data)
+      })
+    },
+
+    getPosts(context){
+      fetch('http://localhost:3000/Data')
+      .then((res) => res.json())
+      .then((data) => {
+        context.commit('setPosts', data)
+      })
+    },
+
     login: async (context, payload) => {
       const { email, password } = payload;
       const response = await fetch(
         `http://localhost:3000/users?email=${email}&password=${password}`
       );
       const userData = await response.json();
-      context.commit("user", userData[0]);
+      context.commit("setUser", userData[0]);
     },
-    register: (context, payload) => {
-      const { name, email, password } = payload;
-      fetch("", {
-        method: "POST",
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((response) => response.json())
-        .then((json) => context.commit("user", json));
-    }},
+  },
   
   modules: {
   }
 })
-
