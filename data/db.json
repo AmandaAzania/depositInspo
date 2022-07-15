@@ -1,5 +1,6 @@
 {
     "Data":[
+
         {
             "id": 1,
             "image_url":"https://i.postimg.cc/bw7JvTgB/adidas-alphabounce.jpg",
@@ -7,7 +8,9 @@
             "desc":"Versatile running shoes with a seamless mesh upper and flexible cushioning.",
             "postedBy":"Matty Cash",
             "Title":"Adidas Alphabounce"
+
         },
+
         {
             "id": 2,
             "image_url":"https://i.postimg.cc/QN6sYb2W/Meme1.png",
@@ -15,7 +18,9 @@
             "desc":"Javascript in a nutshell",
             "postedBy":"Joel Mukanya",
             "Title":"Javascript For Dummies"
+
         },
+
         {
             "id": 3,
             "image_url":"https://i.postimg.cc/PfLp4Pch/1972-Ford-Mustang.jpg",
@@ -31,6 +36,7 @@
             "desc":"Javscript Explained !",
             "postedBy":"Amanda",
             "Title":"Javascript = null"
+            
         },
         {
             "id": 5,
@@ -111,6 +117,7 @@
             "desc":"Funny Memes",
             "postedBy":"Json",
             "Title":"My Life Story"
+
         },
         {
             "id": 15,
@@ -119,33 +126,35 @@
             "desc":"The Nike Air Max 90 is a even better feel for you. Cushioning is softer and more flexible",
             "postedBy":"Cardi E",
             "Title":"Nike Air Max 90"
+
         }
     ],
 
-"users":[
-    {
-        "id":1,
-        "email":"amanda@gmail.com",
-        "name":"amanda",
-        "password":1234
-    },
-    {
-        "id":2,
-        "email":"muddathir@gmail.com",
-        "name":"muddathir",
-        "password":5678
-    },
-    {
-        "id":3,
-        "email":"mogamat@gmail.com",
-        "name":"mogamat",
-        "password":2345
-    },
-    {
-        "id":4,
-        "email":"joshua@gmail.com",
-        "name":"joshua",
-        "password":6789
-    }
-]
+    "users":[
+        {
+            "id":1,
+            "email":"amanda@gmail.com",
+            "name":"amanda",
+            "password":1234
+        },
+        {
+            "id":2,
+            "email":"muddathir@gmail.com",
+            "name":"muddathir",
+            "password":5678
+        },
+        {
+            "id":3,
+            "email":"mogamat@gmail.com",
+            "name":"mogamat",
+            "password":2345
+        },
+        {
+            "id":4,
+            "email":"joshua@gmail.com",
+            "name":"joshua",
+            "password":6789
+        }
+        
+    ]
 }

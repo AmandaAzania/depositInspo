@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Post from '@/components/Post.vue';
-import Navbar from '../components/Navbar.vue'
-
+import Post from '@/components/PostCard.vue';
+import Navbar from '../components/Navbar.vue';
+import store from '../store'
 
 export default {
     components:{
@@ -46,7 +46,6 @@ export default {
 }
 
 body {
-
-  background-color: #34495e;
+  background-color: #415c77;
 }
 </style>

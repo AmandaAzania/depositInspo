@@ -1,49 +1,43 @@
 <template>
-<div class="container">
-  <form @submit.prevent="register">
-    <input type="text" v-model="name" placeholder="Name" />
-    <input type="text" v-model="email" placeholder="email" />
-    <input type="text" v-model="password" placeholder="password" />
-    <button type="submit" id="btn">Register</button>
-  </form>
-  <div v-if="user">Welcome {{ user.name }}</div>
-
-  <div v-if="user"><p>You are successfully registred !!</p> <span>{{ user.name }} </span>
-   <router-link to="/posts">
-                <button class="btn-grad2" type="submit">See your pins</button>
+  <div class="container">
+    <form @submit.prevent="login">
+      <input type="text" v-model="email" placeholder="email" />
+      <input type="text" v-model="password" placeholder="password" />
+    <button type="submit" id="btn">Login</button>
+    </form>
+    <div v-if="user">Welcome {{ user.username }}
+        <router-link to="/posts">
+                <button type="submit">See Pins</button>
                 </router-link>
-  </div>
-
+    </div>
   </div>
 </template>
-
-
 <script>
 export default {
-  data() {
-    return {
-      name: "",
-      email: "",
-      password: "",
-    };
-  },
   computed: {
     user() {
       return this.$store.state.user;
     },
   },
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
   methods: {
-    register() {
-      return this.$store.dispatch("register", {
-        name: this.name,
+    login() {
+      this.$store.dispatch("login", {
         email: this.email,
         password: this.password,
       });
     },
+    logout(){
+        
+    }
   },
 };
 </script>
-
 <style>
 .container{
   min-width: 100vw;
@@ -68,7 +62,7 @@ input[type=text], select {
 
 input{
   width: 100%;
-  color: black;
+  color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -118,32 +112,5 @@ form{
   color: #fff;
   text-decoration: none;
 }
-
-
-p {
-  color: green;
-  font-weight: bold;
-}
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Oleo+Script+Swash+Caps&display=swap');
-
-.btn-grad2  {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Koulen', cursive;
-  font-size: 30px;
-  background: -webkit-linear-gradient(#eee, rgb(105, 1, 1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-span{
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Koulen', cursive;
-  font-size: 30px;
-  background: -webkit-linear-gradient(#eee, rgb(105, 1, 1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-right: 10px;
-}
-
+  
 </style> 

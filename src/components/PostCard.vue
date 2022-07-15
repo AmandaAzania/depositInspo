@@ -17,7 +17,7 @@ export default {
 
 <style>
 .grid {
-    max-width: 100%;
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
@@ -55,13 +55,6 @@ export default {
   height: 100%;
 }
 
-/* .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: relative;
-} */
 
 .card-desc {
   display: block;
