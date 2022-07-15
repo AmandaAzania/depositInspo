@@ -142,6 +142,72 @@
       "email": "oslin@gmail.com",
       "password": "password",
       "id": 6
+    },
+    {
+      "name": "TheGoat",
+      "email": "thegoat@gmail.com",
+      "password": "password",
+      "id": 7
+    },
+    {
+      "name": "ikhlass",
+      "email": "ikhlass@gmail.com",
+      "password": "password",
+      "id": 8
+    },
+    {
+      "name": "NotTheGoat",
+      "email": "notthegoat@gmail.com",
+      "password": "password",
+      "id": 9
+    },
+    {
+      "name": "MiniGoat",
+      "email": "Minigoat@gmail.com",
+      "password": "password",
+      "id": 10
+    },
+    {
+      "name": "charles",
+      "email": "charles@gmail.com",
+      "password": "password",
+      "id": 11
+    },
+    {
+      "name": "xena",
+      "email": "xena@gmail.com",
+      "password": "password",
+      "id": 12
+    },
+    {
+      "name": "philani",
+      "email": "philani@gmail.com",
+      "password": "password",
+      "id": 13
+    },
+    {
+      "name": "cammy",
+      "email": "cammy@gmail.com",
+      "password": "password",
+      "id": 14
+    },
+    {
+      "name": "mikhail",
+      "email": "mikhail@gmail.com",
+      "password": "password",
+      "id": 15
+    },
+    {
+      "name": "joel",
+      "email": "joel@gmail.com",
+      "password": "password",
+      "id": 16
+    },
+    {
+      "name": "kagiso",
+      "email": "kagiso@gmail.com",
+      "password": "password",
+      "id": 17
     }
   ]
 }

@@ -6,7 +6,13 @@
     <input type="text" v-model="password" placeholder="password" />
     <button type="submit">Register</button>
   </form>
-  <div v-if="user">Welcome {{ user.name }}</div>
+  <div v-if="user"><p>You are successfully registred !!</p> <span>{{ user.name }} </span>
+
+   <router-link to="/posts">
+                <button class="btn-grad2" type="submit">See your pins</button>
+                </router-link>
+  
+  </div>
 
   </div>
 </template>
@@ -45,11 +51,39 @@ export default {
   min-height: 100vh;
   background: #068282;
   padding-top: 100px;
-  background-image: url('./images/aa');
+background-image: url("../assets/Gear-Polaroid-Now-Plus-1.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+
 }
-  /* display: flex;
-  flex-flow: column wrap;
-  justify-content: center; */
+p {
+  color: green;
+  font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Oleo+Script+Swash+Caps&display=swap');
+
+          .btn-grad2  {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Koulen', cursive;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, rgb(105, 1, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+span{
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Koulen', cursive;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, rgb(105, 1, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+}
+
 </style>
