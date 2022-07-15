@@ -1,6 +1,6 @@
 <template>
       <div class="container">
-        <img src="../assets/logo(trans).png" alt="">
+        <img src="../assets/logo1.png" alt="">
         <p id="about">Capture A Moment <strong>(CAM) </strong> is a user friendly free photo sharing  website where users are able to post comment and like images that they or other users have uploaded. 
       The websites has different categories where users are able to find  a variety of pictures that peaks ones interest. 
       There are brief descriptions but the main focus of the site is visual. 

@@ -14,13 +14,13 @@
             <i class="bi bi-link-45deg"></i><a :href="post.urls.url" target="blank">{{post.urls.url_short}}</a>
             </div>
             <div id="link" v-else-if="post.urls == null">
-              Link not found
+              No Link
             </div>
             <h3>{{post.Title}}</h3>
             <p>{{post.desc}}</p>
           </div>
           <div id="posted">
-            <div></div>
+            <div><img src="https://i.postimg.cc/Px6ZPd8Y/avatar-icon.jpg" alt=""  id="icon"></div>
             <p>Posted by <span>{{post.postedBy}}</span></p>
           </div>
         </div>
@@ -44,6 +44,9 @@ export default {
     computed:{
       post(){
         return store.state.post
+      },
+      user(){
+        return store.state.user
       }
     }
 }
@@ -132,7 +135,7 @@ h3{
   justify-content: space-between;
 }
 
- #posted>div{
+ #icon{
     background-color: black;
     height: 50px;
     width: 50px;

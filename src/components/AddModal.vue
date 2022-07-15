@@ -1,9 +1,5 @@
 <template>
-<Navbar/>
-<button  data-bs-toggle="modal" data-bs-target="#exampleModal1" id="modalpop">Hello</button>
-
-
-     <div class="modal fade" id="exampleModal1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -33,31 +29,11 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
 export default {
-  components: { Navbar },
-  data(){
-    return{
-            title: "",
-            catergory: "",
-            desc: ""
-            
-    }
-  },
-  methods:{
-    addPost(){
-        return this.$store.dispatch("addPost",{
-            title: this.title,
-            catergory: this.catergory,
-            desc: this.desc
-        })
-    }
-  }
+
 }
 </script>
 
-<style scoped>
-#modalpop{
-margin-top: 20%;
-}
+<style>
+
 </style>

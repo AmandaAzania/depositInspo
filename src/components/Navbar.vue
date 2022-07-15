@@ -3,15 +3,11 @@
           <nav class="navbar fixed-top">
             <div class="container">
               <div>
-              <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="Youtube Logo" width="56px" height="56px" id="icon"></router-link>
+              <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="CAM Logo" width="56px" height="56px" id="icon"></router-link>
               <router-link to="/posts">Posts</router-link> | 
-              <router-link to="/AddPost">Add</router-link>
+              <router-link to="/AddPost" v-if="user" data-bs-toggle="modal" data-bs-target="#exampleModal1">Add</router-link>
               </div>
               <div>
-              <form class="d-flex">
-                <input class="form-control" type="search" placeholder="Search" id="search">
-                <button class="btn" type="submit" id="btnSearch"><i class="bi bi-search"></i></button>
-              </form>
               </div>
               <div id="settings">
                 <div v-if="!user">
@@ -23,24 +19,30 @@
                 </router-link>            
                 </div>
                  <div v-else>
-                  <button class="btn btn-grad" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                  <button class="btn btn-grad" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" id="account">
                 <i class="bi bi-gear" id="gear"></i>
-                    {{user.name}}</button>
+                  <span id="username">{{user.name}}</span></button>
 
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Account Details</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-  <div class="offcanvas-body">
-      Welcome To Your Account Settings <br> {{user.name}}
-        <router-link to="/">
-          <button class="btn-grad" @click="logout">
-              Log Out
-          </button>
-        </router-link>
-  </div>
-</div>
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Account Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          Welcome To Your Account Details <br> {{user.name}}
+                          <div>
+                            <p class="ms-4 mt-3">Email Address: {{user.email}}</p>
+                            <p class="ms-4">User Name: {{user.name}}</p>
+                            <p class="ms-4">Password: {{user.password}}</p>
+                            <p class="ms-4">Profile Picture: </p><img :src="user.icon" alt="pfp" id="profile">
+                          </div>
+                            <router-link to="/">
+                              <button class="btn-grad mt-3" @click="logout">
+                                  Log Out
+                              </button>
+                             </router-link>
+                        </div>
+                    </div>
                  </div>
               </div>
 
@@ -48,10 +50,13 @@
              
           </nav>
         </header>
+        <Add-modal/>
 </template>
 
 <script>
+import AddModal from './AddModal.vue'
 export default {
+  components: { AddModal },
   computed:{
     user(){
       return this.$store.state.user
@@ -72,7 +77,7 @@ export default {
 
 a{
   text-decoration: none;
-  color: #088989;
+  color: white;
 }
 
 #search{
@@ -102,6 +107,7 @@ a{
 
 nav{
   background-color: #34495e;
+  color: black;
 }
 
 header .btn i{
@@ -127,8 +133,8 @@ header .btn i{
 }
 
 #settings button{
-    width: 110px;
     font-size: 15px;
+    width: 110px;
     background-color: white;
     border: solid 1.5px #056e6e;
     color: #056e6e;
@@ -154,41 +160,73 @@ header .btn i{
 }
 
 @media (max-width:1200px){
-    img{
-      display: none;
-    }
     .navbar>.container{
       flex-wrap: nowrap;
     }
-}
-  span {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Koulen', cursive;
-  font-size: 30px;
-  background: -webkit-linear-gradient(#eee, rgb(1, 105, 39));
 
 }
 
+@media (max-width:875px){
+    #search{
+      width: 250px
+    }
+}
 
 .btn-grad {
-            background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
-            margin-left: 2rem;
+  background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+  width: 150px !important;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  display: block;
+}
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+#account{
+  display: flex;
+  align-items: center;
+}
 
-            padding: 2px 5px;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-          }
+.offcanvas{
+  background-color: #34495e;
+  color: white;
+}
 
-          .btn-grad:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-          }
-         
+.offcanvas-body{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.offcanvas-body>div{
+  /* padding: 5px 5px 5px 5px; */
+  border: #045050 3px groove;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#profile{
+  width: 350px;
+  border-radius: 350px;
+  border: #045050 1px solid;
+}
+
+@media (max-width: 650px){
+    #username{
+      display: none;
+    }
+    .btn-grad{
+      width: 47px !important;
+    }
+}
+
 </style>
