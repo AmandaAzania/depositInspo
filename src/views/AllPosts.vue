@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Post from '@/components/Post.vue';
+import Post from '@/components/PostCard.vue';
 import Navbar from '../components/Navbar.vue'
 
 
@@ -39,6 +39,11 @@ export default {
   padding: 25px;
 }
 
+@media (max-width:1200px){
+    #allPosts{
+      margin-top: 12%
+    }
+}
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +52,6 @@ export default {
 
 body {
 
-  background-color: #34495e;
+  background-color: #415c77;
 }
 </style>

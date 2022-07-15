@@ -1,10 +1,10 @@
 <template>
         <header>
           <nav class="navbar fixed-top">
-            <div class="container-fluid">
+            <div class="container">
               <div>
               <router-link class="navbar-brand" to="/"><img src="../assets/logo(trans).png" alt="Youtube Logo" width="56px" height="56px" id="icon"></router-link>
-              <router-link to="/">Home</router-link> | 
+              <router-link to="/posts">Posts</router-link> | 
               <router-link to="/AddPost">Add</router-link>
               </div>
               <div>
@@ -14,22 +14,61 @@
               </form>
               </div>
               <div id="settings">
+                <div v-if="!user">
+                  <router-link to="/register">
+                  <button class="btn account" ><i class="bi bi-person-circle"></i>Sign in</button>
+                </router-link>
+                <router-link to="/login">
+                <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log in</button>
+                </router-link>            
+                </div>
+                 <div v-else>
+                  <button class="btn btn-grad" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                 <i class="bi bi-gear" id="gear"></i>
-                <button class="btn account" ><i class="bi bi-person-circle"></i>Sign In</button>
-                <button class="btn account" ><i class="bi bi-person-rolodex"></i>Log In</button>
+                    {{user.name}}</button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Account Details</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+      Welcome To Your Account Settings <br> {{user.name}}
+        <router-link to="/">
+          <button class="btn-grad" @click="logout">
+              Log Out
+          </button>
+        </router-link>
+  </div>
+</div>
+                 </div>
               </div>
-            </div>
+
+              </div>
+             
           </nav>
         </header>
 </template>
 
 <script>
 export default {
-
+  computed:{
+    user(){
+      return this.$store.state.user
+    }
+  },
+   methods: {
+    logout(){
+       return this.$store.state.user = null
+    }
+  },
 }
 </script>
 
-<style>
+<style scoped>
+/* .container{
+  justify-content: space-between;
+} */
 
 a{
   text-decoration: none;
@@ -52,6 +91,13 @@ a{
   border-radius: 100px;
   width: 50px;
   margin-left: 10px;
+  transition: all 1s;
+}
+
+#btnSearch:hover{
+    background-color: #cacac9;
+    width: 50px;
+    border: 1px solid black;
 }
 
 nav{
@@ -62,14 +108,11 @@ header .btn i{
     color: black;
 }
 
-header .btn:hover{
-    background-color: #cacac9;
-}
-
 #icon{
   width: 156px;
   height: 56px;
   border-radius: 0;
+  object-fit: cover;
 }
 
 #gear{
@@ -84,7 +127,7 @@ header .btn:hover{
 }
 
 #settings button{
-    width: 100px;
+    width: 110px;
     font-size: 15px;
     background-color: white;
     border: solid 1.5px #056e6e;
@@ -109,4 +152,43 @@ header .btn:hover{
 #settings>i{
     padding: 0 10px 0 10px;
 }
+
+@media (max-width:1200px){
+    img{
+      display: none;
+    }
+    .navbar>.container{
+      flex-wrap: nowrap;
+    }
+}
+  span {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Koulen', cursive;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, rgb(1, 105, 39));
+
+}
+
+
+.btn-grad {
+            background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+            margin-left: 2rem;
+
+            padding: 2px 5px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
 </style>

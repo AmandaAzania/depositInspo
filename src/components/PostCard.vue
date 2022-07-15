@@ -2,14 +2,16 @@
         <div class="card">
           <img :src="post.image_url" alt="" class="postImg">
           <div class="card-desc">
-            Posted by 
-            <div>{{post.postedBy}}</div>
-            <button id="postButton">View</button>
+            <p> Posted by <br>{{post.postedBy}}</p>
+            <router-link :to="{name: 'post', params:{id: post.id}}">
+                <button id="postButton">View</button>
+            </router-link> 
           </div>
         </div>
 </template>
 
 <script>
+// import store from '../store'
 export default {
     props: ['post']
 }
@@ -19,7 +21,7 @@ export default {
 .grid {
     max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   grid-auto-rows: 200px 200px;
 
@@ -30,7 +32,7 @@ export default {
 }
 
 .card:nth-child(4) {
-  grid-row: span 3;
+  grid-row: span 2;
 }
 
 .card:nth-child(6) {
@@ -38,16 +40,14 @@ export default {
 }
 
 .card:nth-child(8) {
-  grid-row: span 3;
+  grid-row: span 2;
 }
 
 .card:nth-child(10) {
   grid-row: span 2;
 }
 
-.card:nth-child(13) {
-  grid-row: span 2;
-}
+
 
 .postImg{
   border-radius: 0;
@@ -83,6 +83,7 @@ export default {
 #postButton{
   width: 25%;
   align-self: center;
+  margin-top: 25px;
   border-radius: 200px;
   background-color: #34495e;
   font-size: 16px;

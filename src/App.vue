@@ -1,7 +1,14 @@
 <template>
-
   <router-view/>
 </template>
+
+<script>
+import Navbar from "./components/Navbar.vue";
+export default {
+  components: {Navbar}
+}
+</script>
+
 
 <style>
 #app {
@@ -16,3 +23,4 @@ body{
   overflow-x: hidden;
 }
 </style>
+
