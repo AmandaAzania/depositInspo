@@ -3,7 +3,8 @@
   <form @submit.prevent="register">
     <input type="text" v-model="name" placeholder="Full Name" />
     <input type="text" v-model="email" placeholder="email" />
-    <input type="text" v-model="password" placeholder="password" />
+    <input type="text" v-model="password" placeholder="passwor
+    d" />
     <button type="submit">Register</button>
   </form>
   <div v-if="user"><p>You are successfully registred !!</p> <span>{{ user.name }} </span>
