@@ -127,6 +127,8 @@ justify-content: center;
 }
 
 #settings{
+  display: flex;
+  justify-content: space-between;
   height: 50px;
   background: rgb(225, 225, 225);
   margin-bottom: 10px;
